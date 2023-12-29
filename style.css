@@ -7,3 +7,19 @@
     font-size: 48px;
     margin-bottom: 20px;
 }
+
+#start-btn {
+    background-color: red;
+}
+
+.work-phase {
+    background-color: #4efaec;
+}
+
+.short-break-phase {
+    background-color: #52acc9; 
+}
+
+.long-break-phase {
+    background-color: #d2479d;
+}
