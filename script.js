@@ -2,14 +2,14 @@ let isRunning = false;
 let workDuration = 25 * 60; // 25 minutes for work duration
 let shortBreakDuration = 5 * 60; // 5 minutes for short break
 let longBreakDuration = 15 * 60; // 15 minutes for long break
-let currentDuration = workDuration; // Starts with work duration
+let currentDuration = workDuration;
 let currentTime = currentDuration;
 let timer;
 let cycleCount = 0;
 
-const workSound = new Audio('work.wav');
-const shortBreakSound = new Audio('short.wav');
-const longBreakSound = new Audio('long.wav');
+const workSound = new Audio('sounds/work.wav');
+const shortBreakSound = new Audio('sounds/short.wav');
+const longBreakSound = new Audio('sounds/long.wav');
 
 document.getElementById('start-btn').addEventListener('click', () => {
     if (!isRunning) {
@@ -41,7 +41,6 @@ function updateTimer() {
         clearInterval(timer); 
         if (currentDuration !== workDuration) {
             currentDuration = workDuration;
-            workSound.play().catch(e => console.error("Error playing work sound: ", e));
         } else {
             cycleCount++;
             currentDuration = (cycleCount % 2 === 0) ? longBreakDuration : shortBreakDuration;

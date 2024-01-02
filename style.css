@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Neon';
-    src: url('Font.otf') format('opentype'); 
+    src: url('fonts/Font.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -16,7 +16,7 @@ body, html {
     align-items: center;
     justify-content: center;
     background-color: #000; 
-    background-image: url('1.webp'); 
+    background-image: url('background/1.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
