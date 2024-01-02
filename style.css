@@ -1,25 +1,71 @@
+@font-face {
+    font-family: 'Neon';
+    src: url('Font.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; 
+    background-image: url('1.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Neon', sans-serif;
+    overflow: hidden;
+}
+
 #pomodoro-timer {
     text-align: center;
-    margin-top: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 #timer-display {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-#start-btn {
-    background-color: red;
+#status-text {
+    font-size: 2.5em; 
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 1.5em;
 }
 
-.work-phase {
-    background-color: #4efaec;
+button {
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.5); 
+    font-family: 'Neon', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent; 
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.3); */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.short-break-phase {
-    background-color: #52acc9; 
+button:hover {
+    color: rgba(255, 255, 255, 0.7); 
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.long-break-phase {
-    background-color: #d2479d;
+#start-btn:hover, #pause-btn:hover, #reset-btn:hover {
+    opacity: 0.7; 
 }
+
